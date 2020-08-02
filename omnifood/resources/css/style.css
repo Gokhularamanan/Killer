@@ -4,7 +4,7 @@
 
 *
 {
-    margin:0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -19,6 +19,15 @@ html
     text-rendering: optimizeLegibility;
 }
 
+.clearfix {zoom: 1}
+.clearfix:after
+{
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
 /* ------------------------------------*/
 /*Reusuable components*/
 /*-------------------------------------*/
@@ -63,6 +72,7 @@ h2{
     text-align: center;
     margin-bottom: 30px;
     letter-spacing: 1px;
+   
 }
 
 h3{
@@ -104,6 +114,36 @@ h2::after
     margin-bottom: 20px;
 }
 
+.icon-small
+{
+    color:#e67e22;
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    font-size: 120%;
+    margin-right: 10px;
+    /* secret to alighn text and icons*/
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+/*-------------- Links---------------*/
+a:link,
+a:visited
+{
+    color: #e67e22;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #e67e22;
+    transition: color 0.2  s , border-bottom 0.2s;
+}
+
+a:hover,
+a:active
+{
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
 /*------------- Buttons--------------*/
 
 .btn:link,
@@ -182,8 +222,8 @@ header
     margin-top: 20px;
 }
 
-.main-nav 
-{ 
+.main-nav
+{
     float: right;
     list-style:  none;
     margin-top: 55px;
@@ -218,7 +258,7 @@ header
 /*-------------------------------------*/
 .section-features .long-copy
 {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 /* ------------------------------------*/
 /*Meals*/
@@ -228,7 +268,7 @@ header
 {
     padding: 0;
 }
-.meals-showcase 
+.meals-showcase
 {
     width: 100%;
     list-style: none;
@@ -262,4 +302,91 @@ header
 {
     opacity: 1;
     transform: scale(1.03);
+}
+
+/* ------------------------------------*/
+/*How it works - steps*/
+/*-------------------------------------*/
+
+.section-steps
+{
+    background-color: #f4f4f4;
+}
+
+.step-box
+{
+    margin-top: 30px;
+}
+.step-box:first-child
+{
+    text-align: right;
+    padding-right: 3%;
+}
+
+.step-box:last-child
+{
+    padding-left: 3%;
+    padding-top: 40px;
+    text-align: left;
+}
+
+.app-screen
+{
+    width:40%
+}
+
+.work-steps
+{
+    margin-bottom: 50px;
+}
+
+.work-steps:last-of-type
+{
+    margin-bottom: 80px;
+}
+
+.work-steps div
+{
+    color: #e67e22;
+    border : 2px solid #e67e22;
+    height: 54px;
+    width:54px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 150%;
+    padding: 5px;
+    margin-right: 25px;
+    display: inline-block;
+    float: left;
+
+}
+
+.btn-app:link,
+.btn-app:visited
+{
+    border:0;
+}
+
+.btn-app img
+{
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
+/*--------------------------------------*/
+/*----Cities----*/
+/*--------------------------------------*/
+
+.box img
+{
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    
+}
+
+.city-feature
+{
+    margin-bottom: 5px;
 }
